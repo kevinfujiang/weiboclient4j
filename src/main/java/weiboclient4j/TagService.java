@@ -1,6 +1,7 @@
 package weiboclient4j;
 
-import org.codehaus.jackson.node.ArrayNode;
+//import org.codehaus.jackson.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import weiboclient4j.model.Tag;
 import weiboclient4j.model.UserTagList;
 import weiboclient4j.params.Paging;

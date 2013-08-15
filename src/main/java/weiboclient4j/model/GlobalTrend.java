@@ -1,7 +1,10 @@
 package weiboclient4j.model;
 
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+//import com.fasterxml.jackson.databind.JsonNode;
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.JsonNode;
 
 /**
  * @author Hover Ruan

@@ -1,6 +1,8 @@
 package weiboclient4j.utils;
 
-import org.codehaus.jackson.map.PropertyNamingStrategy;
+//import org.codehaus.jackson.map.PropertyNamingStrategy;
+
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 
 /**
  * @author Hover Ruan

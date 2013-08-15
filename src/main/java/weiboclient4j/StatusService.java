@@ -1,7 +1,9 @@
 package weiboclient4j;
 
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.node.ArrayNode;
+//import com.fasterxml.jackson.databind.JsonNode;
+//import org.codehaus.jackson.node.ArrayNode;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.scribe.model.OAuthRequest;
 import weiboclient4j.model.Count;
 import weiboclient4j.model.Emotion;
@@ -310,7 +312,7 @@ public class StatusService extends AbstractService {
         Map<Long, String> map = new HashMap<Long, String>();
         for (int i = 0; i < arrayNode.size(); i++) {
             JsonNode node = arrayNode.get(i);
-            Iterator<String> fieldNames = node.getFieldNames();
+            Iterator<String> fieldNames = node.fieldNames();
             while (fieldNames.hasNext()) {
                 String idString = fieldNames.next();
                 map.put(new Long(idString), node.get(idString).asText());
@@ -343,7 +345,7 @@ public class StatusService extends AbstractService {
         Map<String, Long> map = new HashMap<String, Long>();
         for (int i = 0; i < arrayNode.size(); i++) {
             JsonNode node = arrayNode.get(i);
-            Iterator<String> fieldNames = node.getFieldNames();
+            Iterator<String> fieldNames = node.fieldNames();
             while (fieldNames.hasNext()) {
                 String mid = fieldNames.next();
                 map.put(mid, node.get(mid).asLong());

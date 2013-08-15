@@ -1,6 +1,7 @@
 package weiboclient4j;
 
-import org.codehaus.jackson.JsonNode;
+//import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.JsonNode;
 import weiboclient4j.model.DomesticResult;
 import weiboclient4j.model.Geo;
 import weiboclient4j.params.Address;

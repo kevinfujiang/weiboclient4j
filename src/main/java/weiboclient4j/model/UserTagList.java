@@ -1,8 +1,12 @@
 package weiboclient4j.model;
 
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-import org.codehaus.jackson.node.ArrayNode;
+//import com.fasterxml.jackson.databind.JsonNode;
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+//import org.codehaus.jackson.node.ArrayNode;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -43,7 +47,7 @@ public class UserTagList {
     public static List<UserTagList> parse(ArrayNode arrayNode) {
         List<UserTagList> result = new ArrayList<UserTagList>(arrayNode.size());
 
-        Iterator<JsonNode> elements = arrayNode.getElements();
+        Iterator<JsonNode> elements = arrayNode.elements();
         while (elements.hasNext()) {
             JsonNode json = elements.next();
             long userId = json.get("id").asLong();

@@ -1,6 +1,6 @@
 package weiboclient4j.model;
 
-import org.codehaus.jackson.JsonNode;
+import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.Test;
 import static weiboclient4j.utils.JsonUtils.readValue;
 

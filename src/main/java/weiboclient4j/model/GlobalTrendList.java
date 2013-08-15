@@ -1,8 +1,12 @@
 package weiboclient4j.model;
 
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-import org.codehaus.jackson.node.ArrayNode;
+//import com.fasterxml.jackson.databind.JsonNode;
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+//import org.codehaus.jackson.node.ArrayNode;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -21,9 +25,9 @@ public class GlobalTrendList {
     }
 
     public GlobalTrendList(JsonNode json) {
-        asOf = json.get("as_of").getLongValue();
+        asOf = json.get("as_of").longValue();
         JsonNode trendsNode = json.get("trends");
-        Iterator<String> fieldNames = trendsNode.getFieldNames();
+        Iterator<String> fieldNames = trendsNode.fieldNames();
         if (fieldNames.hasNext()) {
             time = fieldNames.next();
             ArrayNode trendArray = (ArrayNode) trendsNode.get(time);

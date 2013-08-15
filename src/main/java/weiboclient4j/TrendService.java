@@ -1,6 +1,7 @@
 package weiboclient4j;
 
-import org.codehaus.jackson.JsonNode;
+//import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.JsonNode;
 import weiboclient4j.model.GlobalTrendList;
 import weiboclient4j.model.Trend;
 import weiboclient4j.model.TrendStatus;

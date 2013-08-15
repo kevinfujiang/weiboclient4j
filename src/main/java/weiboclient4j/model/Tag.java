@@ -1,9 +1,14 @@
 package weiboclient4j.model;
 
-import org.codehaus.jackson.JsonNode;
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
-import org.codehaus.jackson.node.ArrayNode;
-import org.codehaus.jackson.type.TypeReference;
+//import com.fasterxml.jackson.databind.JsonNode;
+//import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+//import org.codehaus.jackson.node.ArrayNode;
+//import com.fasterxml.jackson.core.type.TypeReference;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -46,7 +51,7 @@ public class Tag {
     public static Tag parseTag(JsonNode tagNode) {
         Tag tag = new Tag();
 
-        Iterator<String> fieldNames = tagNode.getFieldNames();
+        Iterator<String> fieldNames = tagNode.fieldNames();
         while (fieldNames.hasNext()) {
             String fieldName = fieldNames.next();
             JsonNode fieldValue = tagNode.get(fieldName);
